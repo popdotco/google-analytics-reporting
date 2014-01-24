@@ -7,10 +7,41 @@ This repository is a combination of a Google Analytics API client as well as an 
  * Search by date range
  * Group by a time based field: `dateHour`, `date`, `month`, `week`, `year`, `month`, `yearWeek`, `yearMonth`, `dayOfWeekName`
  * Changing the result sort order: `asc`, `desc`
+
+## Usage ##
+
+```php
+<?php
+$authToken = NULL;
+$username = 'my.analytics.email@example.co';
+$password = 'my.analytics.password';
+$profileId = 'my-api-console-project-id';
+
+// load the API client
+$client = new Google\Analytics\Client($authToken, $username, $password);
+
+// we also want to set the client profile id
+// which is the unique ID of your Google API Console project
+$client->setProfileId($profileId);
+
+// load the reporting class which wraps the API client
+$reporting = new Google\Analytics\Reporting($client);
+
+// generate a report given these filters
+$reportType = 'referrers';
+$startDate = '2014-01-01';
+$endDate = '2014-01-07';
+$groupBy = 'date';
+$orderBy = 'asc';
+
+$results = $reporting->generate($reportType, $startDate, $endDate, $groupBy, $orderBy);
+var_dump($results); 
+
+```
  
 ## Endpoints ##
 
-Some of these are experimental:
+TODO. Some of these are experimental and data is returning incorrectly or in a non-parsed format.
 
 #### Audience ####
 
