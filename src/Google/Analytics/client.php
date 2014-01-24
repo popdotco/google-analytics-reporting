@@ -7,6 +7,10 @@ namespace Google\Analytics;
  *
  * Usage of these dimension and metrics within queries is as follows:
  * https://developers.google.com/analytics/devguides/reporting/core/v3/reference
+ *
+ * TODO: Setup so that we use OAUTHv2 rather than basic authentication. It should
+ * be an easy migration following the work done here:
+ * https://github.com/wanze/Google-Analytics-API-PHP
  */
 
 class Client {
