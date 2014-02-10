@@ -68,3 +68,7 @@ TODO. Some of these are experimental and data is returning incorrectly or in a n
 #### Adwords ####
 
 #### Page Speed (Site Performance) ####
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/popdotco/google-analytics-reporting/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
